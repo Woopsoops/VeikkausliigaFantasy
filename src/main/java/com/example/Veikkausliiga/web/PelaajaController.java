@@ -20,7 +20,7 @@ public class PelaajaController {
 	private PelaajaRepo pelaajaRepo;
 	
 	// kaikki pelaajat
-    @RequestMapping(value="/pelaajalist")
+    @RequestMapping(value={"/", "/pelaajalist"})
     public String pelaajaList(Model model) {	
         model.addAttribute("pelaajat", pelaajaRepo.findAll());
         return "pelaajalist";
