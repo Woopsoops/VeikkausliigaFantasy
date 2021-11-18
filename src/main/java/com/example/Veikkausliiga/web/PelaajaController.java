@@ -28,7 +28,7 @@ public class PelaajaController {
     
     //Poistha pelaaja
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String deleteStudent(@PathVariable("pelaajaid") Long pelaajaid, Model model) {
+    public String deletePelaaja(@PathVariable("pelaajaid") Long pelaajaid, Model model) {
     	pelaajaRepo.deleteById(pelaajaid);
         return "redirect:../pelaajalist";
     }   
